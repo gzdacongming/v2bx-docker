@@ -7,17 +7,15 @@ services:
     volumes:
       - $PWD/config:/etc/XrayR
     restart: always
-    environment:
-      - CertDomain=tk3.1022111.xyz
-      - ApiHost=https://xxx.xxx
-      - ApiKey=xxxx
+    env_file:
+      - conf.env
     network_mode: "host"
   nginx:
     image: nginx
     container_name: nginx
     restart: always
-    environment:
-      - HOST_NAME=tk3.1022111.xyz
+    env_file:
+      - conf.env
     network_mode: "host"
     volumes:
       - $PWD/config/cert/certificates:/etc/nginx/conf.d/cert
