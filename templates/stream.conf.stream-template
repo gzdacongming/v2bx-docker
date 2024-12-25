@@ -1,0 +1,13 @@
+upstream se3 {
+    server 127.0.0.1:4455;
+}
+map $ssl_preread_server_name $CJ {
+    ${HOST_NAME} se3;
+    default se3;
+}
+server {
+    listen 443;
+    listen [::]:443;
+    ssl_preread on;
+    proxy_pass $CJ;
+}
