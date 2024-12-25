@@ -2,7 +2,7 @@ version: '3'
 
 services:
   xrayr:
-    image: xrayr-docker:latest
+    image: chuiniubi/xrayr_chuiniubi:latest
     container_name: xrayr
     volumes:
       - $PWD/config:/etc/XrayR
