@@ -9,8 +9,8 @@ services:
     restart: always
     environment:
       - CertDomain=tk3.1022111.xyz
-      - ApiHost=https://anydoor.eu.org
-      - ApiKey=zxcvbnmasdfghjklqwertyuiop
+      - ApiHost=https://xxx.xxx
+      - ApiKey=xxxx
     network_mode: "host"
   nginx:
     image: nginx
