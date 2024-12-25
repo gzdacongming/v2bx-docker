@@ -2,18 +2,22 @@ version: '3'
 
 services:
   xrayr:
-    image: chuiniubi/xrayr_chuiniubi:latest
+    image: xrayr-docker:latest
     container_name: xrayr
     volumes:
       - $PWD/config:/etc/XrayR
     restart: always
+    environment:
+      - CertDomain=tk3.1022111.xyz
+      - ApiHost=https://anydoor.eu.org
+      - ApiKey=zxcvbnmasdfghjklqwertyuiop
     network_mode: "host"
   nginx:
     image: nginx
     container_name: nginx
     restart: always
     environment:
-      - HOST_NAME=xjp.1022111.xyz
+      - HOST_NAME=tk3.1022111.xyz
     network_mode: "host"
     volumes:
       - $PWD/config/cert/certificates:/etc/nginx/conf.d/cert
