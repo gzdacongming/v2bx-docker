@@ -2,7 +2,7 @@ version: '3'
 
 services:
   v2bx:
-    image: v2bx:20250922
+    image: chuiniubi/v2bx_chuiniubi:latest
     container_name: v2bx
     volumes:
       - $PWD/config:/etc/V2bX
