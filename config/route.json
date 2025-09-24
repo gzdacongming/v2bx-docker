@@ -50,6 +50,18 @@
                 "bittorrent"
             ]
         },
+    {
+      "type": "field",
+      "outboundTag": "socks5-warp",
+      "domain": ["geosite:netflix","domain:ping0.cc","domain:abema.tv","domain:ipinfo.io","geosite:speedtest","geosite:disney"]
+    },
+	{
+      "type": "field",
+      "outboundTag": "IPv6_out",
+      "domain": [
+          "geosite:netflix"
+      ]
+    },
         {
             "outboundTag": "IPv4_out",
             "network": "udp,tcp"
